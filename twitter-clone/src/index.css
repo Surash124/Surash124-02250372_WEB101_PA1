@@ -1,0 +1,35 @@
+:root {
+  --bg: #000;
+  --bg2: #16181c;
+  --bg3: #1d1f23;
+  --border: #2f3336;
+  --text: #e7e9ea;
+  --muted: #71767b;
+  --accent: #1d9bf0;
+  --accent-h: #1a8cd8;
+  --accent-bg: rgba(29,155,240,0.1);
+  --like: #f91880;
+  --like-bg: rgba(249,24,128,0.1);
+  --rt: #00ba7c;
+  --rt-bg: rgba(0,186,124,0.1);
+  --font: 'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; border: none; background: none; color: inherit; font-family: inherit; }
+textarea, input { font-family: inherit; font-size: inherit; }
+::-webkit-scrollbar { width: 0px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

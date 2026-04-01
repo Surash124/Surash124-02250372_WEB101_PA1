@@ -1,0 +1,57 @@
+.card {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+  animation: fadeIn 0.3s ease;
+}
+.card:hover { background: rgba(255,255,255,0.03); }
+
+.avatar { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; }
+.body   { flex: 1; min-width: 0; }
+
+.header {
+  display: flex; align-items: center; gap: 4px;
+  flex-wrap: wrap; margin-bottom: 4px;
+}
+.name   { font-weight: 700; font-size: 15px; }
+.handle, .time { font-size: 15px; color: var(--muted); }
+.dot    { color: var(--muted); }
+.text   { font-size: 15px; line-height: 1.6; word-break: break-word; }
+
+.imageWrap {
+  margin-top: 12px; border-radius: 12px;
+  overflow: hidden; border: 1px solid var(--border);
+}
+.tweetImg { width: 100%; max-height: 300px; object-fit: cover; display: block; }
+
+.actions {
+  display: flex; align-items: center;
+  gap: 4px; margin-top: 12px;
+}
+.btn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 8px; border-radius: 9999px;
+  font-size: 13px; color: var(--muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+/* Action hover colours */
+.reply:hover { color: var(--accent); background: var(--accent-bg); }
+.rt:hover    { color: var(--rt);     background: var(--rt-bg); }
+.like:hover  { color: var(--like);   background: var(--like-bg); }
+.views:hover { color: var(--accent); background: var(--accent-bg); }
+.bm:hover    { color: var(--accent); background: var(--accent-bg); }
+
+/* Active/toggled states */
+.rtOn   { color: var(--rt); }
+.likeOn { color: var(--like); }
+.bmOn   { color: var(--accent); }
+
+@media (max-width: 500px) {
+  .btn span { display: none; }
+  .actions  { gap: 0; }
+  .btn      { padding: 6px; }
+}

@@ -1,0 +1,6 @@
+/* App.module.css */
+.layout {
+  display: flex; justify-content: center;
+  max-width: 1280px; margin: 0 auto; min-height: 100vh;
+}
+@media (max-width: 500px) { .layout { padding-bottom: 56px; } }
